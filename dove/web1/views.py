@@ -9,6 +9,8 @@ def base(request):
     return render(request,'web1/base.html')
 def login(request):
     return render(request,'web1/login.html')
+def register(request):
+    return render(request,'web1/register.html')
 @csrf_exempt
 def signup(request):
     if request.method == 'POST':
@@ -20,6 +22,7 @@ def signup(request):
             print(username)
            
     return render(request,'web1/signup.html')
+
 from django.shortcuts import render
 from .forms import RegistrationForm
 from django.http import HttpResponse
